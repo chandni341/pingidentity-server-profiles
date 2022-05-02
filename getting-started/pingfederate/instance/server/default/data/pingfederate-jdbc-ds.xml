@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+    <local-tx-datasource maskAttributeValues="false">
+        <description>pf-oauth-cs</description>
+        <name>pf-oauth-cs</name>
+        <jndi-name>JDBC-EC05F0A33A4105C993DF0DB9D55556508F426588</jndi-name>
+        <connection-url>jdbc:sqlserver://mssql-deployment;databaseName=pf-oauth-cs;encrypt=true;trustServerCertificate=true;</connection-url>
+        <driver-class>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-class>
+        <user-name>sa</user-name>
+        <password>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiZ3ZJUnNIQm5WUCIsInZlcnNpb24iOiIxMS4wLjIuMCJ9..H9weXJWspLBSBh1daUalCA.uwSPuPsS2_DKYndfL3JZaQ.30fwvweLJMxbETdV7-nBYg</password>
+        <min-pool-size>10</min-pool-size>
+        <max-pool-size>100</max-pool-size>
+        <blocking-timeout-millis>5000</blocking-timeout-millis>
+        <idle-timeout-minutes>5</idle-timeout-minutes>
+        <check-valid-connection-sql>SELECT getdate()</check-valid-connection-sql>
+        <ping-db-type>Custom</ping-db-type>
+        <allow-multi-value-attributes>true</allow-multi-value-attributes>
+        <connectionTagList>
+            <tagEntry connection-url="jdbc:sqlserver://mssql-deployment;databaseName=pf-oauth-cs;encrypt=true;trustServerCertificate=true;" tags=""/>
+        </connectionTagList>
+    </local-tx-datasource>
+    <local-tx-datasource maskAttributeValues="false">
+        <description>ProvisionerDS (sa)</description>
+        <name>ProvisionerDS (sa)</name>
+        <jndi-name>ProvisionerDS</jndi-name>
+        <connection-url>jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false</connection-url>
+        <driver-class>org.hsqldb.jdbcDriver</driver-class>
+        <user-name>sa</user-name>
+        <password>eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiZ3ZJUnNIQm5WUCIsInZlcnNpb24iOiIxMS4wLjIuMCJ9..54P7S2To8anGqWx201VYdA.V4hZKgI4OgIdE11o7dtHXA.KmLEOymxcD2PDIrEf4zZNw</password>
+        <ping-db-type>Custom</ping-db-type>
+        <allow-multi-value-attributes>false</allow-multi-value-attributes>
+        <connectionTagList/>
+    </local-tx-datasource>
+</datasources>
